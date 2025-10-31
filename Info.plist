@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Your existing keys -->
+    <key>CFBundleName</key>
+    <string>HUBFOOD</string>
+
+    <!-- ATS exception -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>14.139.187.229</key>
+            <dict>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <key>NSTemporaryExceptionMinimumTLSVersion</key>
+                <string>TLSv1.1</string>
+            </dict>
+        </dict>
+    </dict>
+
+    <!-- Permissions -->
+    <key>NSCameraUsageDescription</key>
+    <string>This app requires access to the camera to capture photos.</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app requires access to your photo library to upload images.</string>
+
+    <!-- Optional: If you also need saving to library -->
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>This app needs permission to save images to your photo library.</string>
+</dict>
+</plist>
